@@ -8,17 +8,20 @@ body, html {
   height: 100%;
   overflow-x: hidden;
   color: #fff;
+  background: #0a0a0a;
 }
 
-/* BACKGROUND */
+/* =========================
+   BACKGROUND
+========================= */
 .background {
-  background: url('https://media.discordapp.net/attachments/1409723120868262070/1455076301026365541/ChatGPT_Image_Dec_27_2025_12_46_08_AM.png?ex=695368e8&is=69521768&hm=f52f25e8958f131f9210bccb608c55d17a08163c2dd853032c93dd1c97535076&=&format=webp&quality=lossless&width=1223&height=815') no-repeat center center fixed;
+  background: url('https://www.shutterstock.com/shutterstock/videos/1096665907/thumb/1.jpg?ip=x480') no-repeat center center fixed;
   background-size: cover;
   position: fixed;
   width: 100%;
   height: 100%;
   z-index: -1;
-  filter: brightness(0.8) blur(1px);
+  filter: brightness(0.7) saturate(120%);
 }
 
 /* =========================
@@ -31,49 +34,50 @@ body, html {
   flex-wrap: wrap;
   gap: 30px;
   padding: 50px 20px;
-  z-index: 1;
   position: relative;
+  z-index: 1;
 }
 
 /* =========================
-   CARDS (GLASSMORPHIC)
+   CARDS (GLASSMORPHIC VIP)
 ========================= */
 .card {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
   padding: 30px;
-  flex: 1 1 300px;
-  max-width: 500px;
+  flex: 1 1 320px;
+  max-width: 520px;
   font-weight: bold;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+  transform: translateY(-12px);
+  box-shadow: 0 25px 60px rgba(255, 0, 255, 0.4), 0 15px 50px rgba(0, 255, 255, 0.3);
+  border: 1px solid rgba(255,0,255,0.4);
 }
 
 /* =========================
    PROFILE IMAGE
 ========================= */
 .profile-img {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid rgba(255,255,255,0.6);
+  border: 4px solid rgba(0,255,255,0.7);
   display: block;
-  margin: 0 auto 20px auto;
-  transition: transform 0.3s ease;
+  margin: 0 auto 22px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #00f0ff;
+  transform: scale(1.08) rotate(3deg);
+  box-shadow: 0 0 25px #ff00ff, 0 0 35px #00fff0;
 }
 
 /* =========================
@@ -82,7 +86,7 @@ body, html {
 .links {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 12px;
+  gap: 14px;
   margin-top: 1rem;
 }
 
@@ -91,26 +95,26 @@ body, html {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 10px 15px;
-  background: rgba(0, 255, 255, 0.1);
-  border-radius: 12px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, rgba(0,255,255,0.15), rgba(255,0,255,0.15));
+  border-radius: 14px;
   text-align: center;
   color: #fff;
   font-size: 1em;
   font-weight: 500;
-  transition: 0.3s ease;
-  border: 1px solid rgba(0,255,255,0.3);
+  transition: 0.35s ease;
+  border: 1px solid rgba(255,255,255,0.15);
 }
 
 .links a:hover {
-  transform: scale(1.05);
-  background: rgba(0, 255, 255, 0.2);
-  box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+  transform: scale(1.08);
+  background: linear-gradient(135deg, rgba(0,255,255,0.3), rgba(255,0,255,0.3));
+  box-shadow: 0 0 15px #00fff0, 0 0 25px #ff00ff;
 }
 
 .links img {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border-radius: 6px;
 }
 
@@ -119,31 +123,31 @@ body, html {
 ========================= */
 .description-card h2 {
   margin-top: 0;
-  color: #aeefff;
+  color: #ff77ff;
   font-family: 'Roboto Mono', monospace;
-  text-shadow: 0 0 10px #00f0ff;
+  text-shadow: 0 0 15px #00fff0, 0 0 25px #ff00ff;
 }
 
 .description-card p, 
 .description-card ul {
-  margin-top: 10px;
-  line-height: 1.6;
+  margin-top: 12px;
+  line-height: 1.7;
 }
 
 .description-card ul {
-  padding-left: 20px;
+  padding-left: 22px;
 }
 
 .description-card li {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
 }
 
 /* =========================
    PROJECTS CARD
 ========================= */
 .projects-card h2 {
-  color: #aeefff;
-  text-shadow: 0 0 10px #00f0ff;
+  color: #ff77ff;
+  text-shadow: 0 0 15px #00fff0, 0 0 25px #ff00ff;
   font-family: 'Roboto Mono', monospace;
 }
 
@@ -153,21 +157,21 @@ body, html {
 }
 
 .projects-card li {
-  background: rgba(0, 255, 255, 0.05);
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  transition: all 0.3s ease;
+  background: rgba(255,0,255,0.05);
+  padding: 12px 18px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  transition: all 0.35s ease;
 }
 
 .projects-card li:hover {
-  transform: translateX(5px);
-  background: rgba(0, 255, 255, 0.15);
-  box-shadow: 0 0 15px #00f0ff;
+  transform: translateX(8px);
+  background: rgba(0,255,255,0.15);
+  box-shadow: 0 0 18px #00fff0, 0 0 25px #ff00ff;
 }
 
 /* =========================
-   FALLING SNOW
+   FALLING COSMIC EMOJIS
 ========================= */
 .leaves {
   pointer-events: none;
@@ -182,23 +186,22 @@ body, html {
 
 .leaf {
   position: absolute;
-  font-size: calc(1.2rem + 1vw);
+  font-size: calc(1.4rem + 1vw);
   top: -50px;
-  opacity: 0.8;
+  opacity: 0.85;
   animation: fall linear infinite;
 }
 
-/* Random horizontal movement */
-.leaf:nth-child(1) { left: 10%; animation-duration: 10s; animation-delay: 0s; }
-.leaf:nth-child(2) { left: 25%; animation-duration: 12s; animation-delay: 2s; }
-.leaf:nth-child(3) { left: 40%; animation-duration: 8s; animation-delay: 1s; }
-.leaf:nth-child(4) { left: 55%; animation-duration: 14s; animation-delay: 3s; }
-.leaf:nth-child(5) { left: 70%; animation-duration: 11s; animation-delay: 2.5s; }
-.leaf:nth-child(6) { left: 85%; animation-duration: 9s; animation-delay: 0.5s; }
+.leaf:nth-child(1) { left: 5%; animation-duration: 12s; animation-delay: 0s; }
+.leaf:nth-child(2) { left: 20%; animation-duration: 15s; animation-delay: 2s; }
+.leaf:nth-child(3) { left: 35%; animation-duration: 10s; animation-delay: 1s; }
+.leaf:nth-child(4) { left: 50%; animation-duration: 16s; animation-delay: 3s; }
+.leaf:nth-child(5) { left: 65%; animation-duration: 13s; animation-delay: 2.5s; }
+.leaf:nth-child(6) { left: 80%; animation-duration: 11s; animation-delay: 0.5s; }
 
 @keyframes fall {
   0% { transform: translateX(0) translateY(0) rotate(0deg); opacity:0.9; }
-  100% { transform: translateX(20px) translateY(110vh) rotate(360deg); opacity:0; }
+  100% { transform: translateX(25px) translateY(110vh) rotate(360deg); opacity:0; }
 }
 
 /* =========================
