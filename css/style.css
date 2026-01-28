@@ -188,8 +188,8 @@ main {
 }
 .card::after { pointer-events: none; }
 .card .easter-egg,
-.card .easter-egg * { position: relative; z-index: 3; }
-.easter-egg { position: relative; z-index: 4; pointer-events: auto; background-clip: padding-box; }
+.card .easter-egg * { position: relative; z-index: 5; }
+.easter-egg { position: relative; z-index: 6; pointer-events: auto; background-clip: padding-box; }
 .badges { display: flex; gap: 8px; flex-wrap: wrap; }
 .badge {
   border: 1px dashed var(--accent-2);
