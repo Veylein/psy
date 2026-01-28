@@ -183,9 +183,11 @@ main {
   content:""; position:absolute; inset:-40%; background: radial-gradient(circle, rgba(255,139,212,0.12), transparent 45%);
   transform: rotate(25deg);
   pointer-events: none;
+  z-index: 0;
 }
 .card .easter-egg,
-.card .easter-egg * { position: relative; z-index: 2; }
+.card .easter-egg * { position: relative; z-index: 3; }
+.easter-egg { position: relative; z-index: 3; }
 .badges { display: flex; gap: 8px; flex-wrap: wrap; }
 .badge {
   border: 1px dashed var(--accent-2);
