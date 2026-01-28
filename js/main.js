@@ -5,6 +5,9 @@ const egg = document.querySelector('.easter-egg');
 const gamePanel = document.getElementById('game-panel');
 const closeGameBtn = document.getElementById('close-game');
 
+// Ensure the egg stays clickable atop card decorations
+egg.style.pointerEvents = 'auto';
+
 entrance.addEventListener('click', () => {
   entrance.classList.add('hidden');
   main.classList.remove('hidden');
