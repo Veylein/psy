@@ -182,6 +182,7 @@ main {
 .card::before {
   content:""; position:absolute; inset:-40%; background: radial-gradient(circle, rgba(255,139,212,0.12), transparent 45%);
   transform: rotate(25deg);
+  pointer-events: none;
 }
 .badges { display: flex; gap: 8px; flex-wrap: wrap; }
 .badge {
